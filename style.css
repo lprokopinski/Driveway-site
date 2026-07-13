@@ -1,0 +1,335 @@
+/* =========================================================
+   DESIGN TOKENS
+   Change these values to re-theme the entire site at once.
+========================================================= */
+:root {
+  --charcoal: #2b2b2a;      /* asphalt - main dark color */
+  --sealant: #161615;       /* near-black - header/footer */
+  --cream: #f0ebe1;         /* warm concrete - main background */
+  --cream-dim: #e3ddd0;     /* slightly darker cream for cards */
+  --orange: #c1502e;        /* work-vest orange - accent/CTA */
+  --orange-dark: #a5401f;
+  --text-dark: #201f1d;
+  --text-light: #f0ebe1;
+
+  --font-display: "Oswald", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+/* =========================================================
+   RESET / BASE
+========================================================= */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background: var(--cream);
+  line-height: 1.5;
+}
+
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1, h2, h3, .logo, .eyebrow {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+.site-header {
+  background: var(--sealant);
+  color: var(--text-light);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.03em;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.main-nav a {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--text-light);
+  opacity: 0.85;
+  transition: opacity 0.15s ease;
+}
+
+.main-nav a:hover { opacity: 1; }
+
+.nav-cta {
+  background: var(--orange);
+  padding: 8px 18px;
+  border-radius: 4px;
+  opacity: 1 !important;
+}
+
+.nav-cta:hover { background: var(--orange-dark); }
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+.btn {
+  display: inline-block;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 16px 32px;
+  border-radius: 4px;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--orange);
+  color: var(--text-light);
+}
+
+.btn-primary:hover {
+  background: var(--orange-dark);
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   EYEBROW LABEL (small caps label above headings)
+========================================================= */
+.eyebrow {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  color: var(--orange);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+.hero {
+  background: var(--charcoal);
+  color: var(--text-light);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-inner {
+  padding: 100px 24px 120px;
+  max-width: 720px;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #d8d2c4;
+  margin-bottom: 36px;
+  max-width: 56ch;
+}
+
+/* Signature element: diagonal "sealcoat stripe" divider,
+   echoing a freshly striped driveway line. */
+.stripe {
+  height: 18px;
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--orange),
+    var(--orange) 24px,
+    var(--sealant) 24px,
+    var(--sealant) 48px
+  );
+}
+
+.stripe-flip {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--orange),
+    var(--orange) 24px,
+    var(--sealant) 24px,
+    var(--sealant) 48px
+  );
+}
+
+/* =========================================================
+   SERVICES
+========================================================= */
+.services {
+  padding: 80px 0 90px;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: var(--cream-dim);
+  border-left: 4px solid var(--orange);
+  padding: 28px 24px;
+  border-radius: 4px;
+}
+
+.service-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #4a4844;
+}
+
+/* =========================================================
+   WHY US
+========================================================= */
+.why-us {
+  background: var(--sealant);
+  color: var(--text-light);
+  padding: 80px 0;
+}
+
+.why-inner { max-width: 640px; }
+
+.why-us h2 {
+  font-size: 1.9rem;
+  margin-bottom: 28px;
+}
+
+.why-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.why-list li {
+  padding-left: 28px;
+  position: relative;
+  color: #d8d2c4;
+}
+
+.why-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  background: var(--orange);
+  border-radius: 2px;
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+.contact {
+  padding: 90px 0 100px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+.contact-sub {
+  max-width: 50ch;
+  margin: 0 auto 36px;
+  color: #4a4844;
+}
+
+.contact-details {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding: 14px 20px;
+  border: 2px solid var(--charcoal);
+  border-radius: 4px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.contact-link:hover {
+  background: var(--charcoal);
+  color: var(--text-light);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+.site-footer {
+  background: var(--sealant);
+  color: #a39d90;
+  text-align: center;
+  padding: 24px 0;
+  font-size: 0.85rem;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 720px) {
+  .main-nav { gap: 16px; }
+  .main-nav a { font-size: 0.85rem; }
+  .service-grid { grid-template-columns: 1fr; }
+  .hero-inner { padding: 70px 24px 90px; }
+  .contact-details { flex-direction: column; align-items: center; }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn-primary:hover { transform: none; }
+}
