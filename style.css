@@ -7,7 +7,7 @@
   --sealant: #161615;       /* near-black - header/footer */
   --cream: #f0ebe1;         /* warm concrete - main background */
   --cream-dim: #e3ddd0;     /* slightly darker cream for cards */
-  --orange: #c1502e;        /* work-vest orange - accent/CTA */
+  --Yellow: #fbca00        /* work-vest orange - accent/CTA */
   --orange-dark: #a5401f;
   --text-dark: #201f1d;
   --text-light: #f0ebe1;
@@ -48,7 +48,7 @@ a {
 
 a:focus-visible,
 button:focus-visible {
-  outline: 3px solid var(--orange);
+  outline: 3px solid var(--Yellow);
   outline-offset: 3px;
 }
 
