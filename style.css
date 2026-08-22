@@ -7,7 +7,7 @@
   --sealant: #161615;       /* near-black - header/footer */
   --cream: #f0ebe1;         /* warm concrete - main background */
   --cream-dim: #e3ddd0;     /* slightly darker cream for cards */
-  --Yellow: #fbca00        /* work-vest orange - accent/CTA */
+  --yellow: #fbca00        /* work-vest orange - accent/CTA */
   --orange-dark: #a5401f;
   --text-dark: #201f1d;
   --text-light: #f0ebe1;
@@ -132,7 +132,7 @@ button:focus-visible {
 .eyebrow {
   font-size: 0.85rem;
   letter-spacing: 0.12em;
-  color: var(--orange);
+  color: var(--yellow);
   font-weight: 600;
   margin-bottom: 12px;
 }
@@ -172,8 +172,8 @@ button:focus-visible {
   height: 18px;
   background: repeating-linear-gradient(
     -45deg,
-    var(--orange),
-    var(--orange) 24px,
+    var(--yellow),
+    var(--yellow) 24px,
     var(--sealant) 24px,
     var(--sealant) 48px
   );
@@ -182,8 +182,8 @@ button:focus-visible {
 .stripe-flip {
   background: repeating-linear-gradient(
     45deg,
-    var(--orange),
-    var(--orange) 24px,
+    var(--yellow),
+    var(--yellow) 24px,
     var(--sealant) 24px,
     var(--sealant) 48px
   );
@@ -209,7 +209,7 @@ button:focus-visible {
 
 .service-card {
   background: var(--cream-dim);
-  border-left: 4px solid var(--orange);
+  border-left: 4px solid var(--yellow);
   padding: 28px 24px;
   border-radius: 4px;
 }
@@ -261,7 +261,7 @@ button:focus-visible {
   top: 8px;
   width: 12px;
   height: 12px;
-  background: var(--orange);
+  background: var(--yellow);
   border-radius: 2px;
 }
 
